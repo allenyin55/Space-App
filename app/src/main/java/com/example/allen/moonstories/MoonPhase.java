@@ -2,23 +2,54 @@ package com.example.allen.moonstories;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import java.util.Calendar;
 import java.util.Currency;
 
 public class MoonPhase extends AppCompatActivity {
 
+    private ImageView imageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_moon_phase);
 
-        int phase = 0;
+        imageView = (ImageView) findViewById(R.id.imageView6);
 
         GetDate dateGetter = new GetDate();
         if (moon_phase(dateGetter.getCurrentDay(), dateGetter.getCurrentMonth(), dateGetter.getCurrentYear()) == 0)
         {
-           int phase = 0;
+            imageView.setImageResource(R.drawable.a0);
+        }
+        if (moon_phase(dateGetter.getCurrentDay(), dateGetter.getCurrentMonth(), dateGetter.getCurrentYear()) == 1)
+        {
+            imageView.setImageResource(R.drawable.a1);
+        }
+        if (moon_phase(dateGetter.getCurrentDay(), dateGetter.getCurrentMonth(), dateGetter.getCurrentYear()) == 2)
+        {
+            imageView.setImageResource(R.drawable.a2);
+        }
+        if (moon_phase(dateGetter.getCurrentDay(), dateGetter.getCurrentMonth(), dateGetter.getCurrentYear()) == 3)
+        {
+            imageView.setImageResource(R.drawable.a3);
+        }
+        if (moon_phase(dateGetter.getCurrentDay(), dateGetter.getCurrentMonth(), dateGetter.getCurrentYear()) == 4)
+        {
+            imageView.setImageResource(R.drawable.a4);
+        }
+        if (moon_phase(dateGetter.getCurrentDay(), dateGetter.getCurrentMonth(), dateGetter.getCurrentYear()) == 5)
+        {
+            imageView.setImageResource(R.drawable.a5);
+        }
+        if (moon_phase(dateGetter.getCurrentDay(), dateGetter.getCurrentMonth(), dateGetter.getCurrentYear()) == 6)
+        {
+            imageView.setImageResource(R.drawable.a6);
+        }
+        if (moon_phase(dateGetter.getCurrentDay(), dateGetter.getCurrentMonth(), dateGetter.getCurrentYear()) == 7)
+        {
+            imageView.setImageResource(R.drawable.a7);
         }
     }
 
